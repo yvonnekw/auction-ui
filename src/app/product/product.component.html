@@ -1,0 +1,7 @@
+<p>product works!</p>
+<img [src]="imgURL" alt="">
+<button disabled="{{isDisabled}}" >Disable button</button>
+<button [disabled]="isDisabled">Disable button using property Binding</button>
+<button [class.active]="isActive">submit a bid</button>
+<button [class.active]="isActive" [class.no-active] = "!isActive">buy now</button>
+<h5>{{users}}</h5>

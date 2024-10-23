@@ -1,0 +1,23 @@
+
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+<h2>Product List</h2>
+<ul>
+  <li *ngFor="let product of products">
+    <h3>{{ product.productName }}</h3>
+    <p>product id: {{ product.productId }}</p>
+    <p>Brand: {{ product.brandName }}</p>
+    <p>Description: {{ product.description }}</p>
+    <p>Price: ${{ product.buyNowPrice }}</p>
+    <button (click)="submitBid(product.productId)">Submit a Bid</button>
+    <button (click)="buyNow(product.productId)">Buy Now</button>
+  </li>
+</ul>
+
+
+<div *ngIf="!isLoading && products.length === 0">No products available.</div>
+
+
+
+<!-- Display message if no products are available -->
+<div *ngIf="!isLoading && products.length === 0">No products available.</div>
+
